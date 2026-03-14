@@ -1,5 +1,3 @@
-import data_struct.ListNode;
-
 /**
  * @author xiaoweii
  * @create 2026-03-07 10:42
@@ -7,20 +5,20 @@ import data_struct.ListNode;
 public class LeetCode_0203 {
     public ListNode removeElements(ListNode head, int val) {
         ListNode dummy = new ListNode(-1);
-        dummy.setNext(head);
+        dummy.next = head;
 
         ListNode pre = dummy;
         ListNode cur = head;
 
         while (cur != null) {
-            if (cur.getVal() == val) {
-                pre.setNext(cur.getNext());
+            if (cur.val == val) {
+                pre.next = cur.next;
             } else {
                 pre = cur;
             }
-            cur = cur.getNext();
+            cur = cur.next;
         }
 
-        return dummy.getNext();
+        return dummy.next;
     }
 }

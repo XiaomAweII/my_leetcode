@@ -1,5 +1,3 @@
-import data_struct.ListNode;
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -19,13 +17,13 @@ public class LeetCode_0160 {
             if (pointA == null) {
                 pointA = headB;
             } else {
-                pointA = pointA.getNext();
+                pointA = pointA.next;
             }
 
             if (pointB == null) {
                 pointB = headA;
             } else {
-                pointB = pointB.getNext();
+                pointB = pointB.next;
             }
         }
         return pointA;
